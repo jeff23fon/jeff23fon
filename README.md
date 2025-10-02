@@ -7,4 +7,4 @@
 - ⚡ Fun fact: I can drive reach in a freezer (-22°) for 3 hours without coming out.
 
 ## Tech Stacks
-[![My Skills](https://skillicons.dev/icons?i=ai,py,ts,js,react,nodejs,html,git,flask,fastapi,azure,css,docker,github,latex,linux,materialui,mongodb,npm,postman,r,redux,sklearn,tailwind,ubuntu,vite,vitetest&perline=20)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=vscode,py,r,sklearn,selenium,fastapi,flask,redis,azure,docker,git,github,ubuntu,githubactions,html,css,tailwind,js,ts,react,redux,vite,vitetest,nodejs,npm,materialui,mongodb,&perline=20)](https://skillicons.dev)
