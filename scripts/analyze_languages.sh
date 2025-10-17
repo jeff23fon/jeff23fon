@@ -97,7 +97,9 @@ echo "$SORTED" | while IFS=: read -r LANG PERCENT; do
   fi
 done
 
-# Auto-update README.md: replace badges under '## Language Distribution' with a blank line after the header
+
+
+# Auto-update README.md: remove all old badge blocks and insert only one new block under '## Language Distribution'
 if grep -q '^## Language Distribution' README.md; then
   awk -v file="$BADGES_FILE" '
     BEGIN {infile=file; insection=0}
@@ -106,8 +108,9 @@ if grep -q '^## Language Distribution' README.md; then
       while ((getline line < infile) > 0) print line;
       insection=1; next
     }
-    insection && /^$/ { insection=0; print; next }
-    insection { next }
+    insection && (/^!/ || /^$/) { next }
+    insection && !/^!/ { next }
+    insection=0
     { print }
   ' README.md > README.md.tmp && mv README.md.tmp README.md
 else
