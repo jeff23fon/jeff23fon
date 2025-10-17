@@ -92,11 +92,15 @@ Data Science/AI Engineer loves creating AI applications to automate tasks. Good 
     <img src="assets/icons/mongodb.svg" alt="MongoDB" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
   </a>
   <a href="https://www.langchain.com/" target="_blank" rel="noopener noreferrer" title="LangChain">
-    <img src="assets/icons/langchain.svg" alt="MongoDB" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
+    <img src="assets/icons/langchain.svg" alt="Langchain" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
+  </a>
+  <a href="https://www.postgresql.org/" target="_blank" rel="noopener noreferrer" title="PostgreSQL">
+    <img src="assets/icons/postgreSQL.svg" alt="PostgreSQL" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
   </a>
 </div>
 
-## Programming Language Distribution
+## Language Distribution
+
 ![Python](https://img.shields.io/badge/Python-47%25-blue)
 ![TypeScript](https://img.shields.io/badge/TypeScript-33%25-blue)
 ![C#](https://img.shields.io/badge/C%23-7%25-blue)
@@ -105,3 +109,82 @@ Data Science/AI Engineer loves creating AI applications to automate tasks. Good 
 ![Makefile](https://img.shields.io/badge/Makefile-1%25-blue)
 ![CSS](https://img.shields.io/badge/CSS-1%25-blue)
 
+![Python](https://img.shields.io/badge/Python-47%25-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-33%25-blue)
+![C#](https://img.shields.io/badge/C%23-7%25-blue)
+![Shell](https://img.shields.io/badge/Shell-3%25-blue)
+![JupyterNotebook](https://img.shields.io/badge/JupyterNotebook-3%25-blue)
+![Makefile](https://img.shields.io/badge/Makefile-1%25-blue)
+![CSS](https://img.shields.io/badge/CSS-1%25-blue)
+
+![Python](https://img.shields.io/badge/Python-47%25-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-33%25-blue)
+![C#](https://img.shields.io/badge/C%23-7%25-blue)
+![Shell](https://img.shields.io/badge/Shell-3%25-blue)
+![JupyterNotebook](https://img.shields.io/badge/JupyterNotebook-3%25-blue)
+![Makefile](https://img.shields.io/badge/Makefile-1%25-blue)
+![CSS](https://img.shields.io/badge/CSS-1%25-blue)
+
+![Python](https://img.shields.io/badge/Python-47%25-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-33%25-blue)
+![C#](https://img.shields.io/badge/C%23-7%25-blue)
+![Shell](https://img.shields.io/badge/Shell-3%25-blue)
+![JupyterNotebook](https://img.shields.io/badge/JupyterNotebook-3%25-blue)
+![Makefile](https://img.shields.io/badge/Makefile-1%25-blue)
+![CSS](https://img.shields.io/badge/CSS-1%25-blue)
+
+![Python](https://img.shields.io/badge/Python-47%25-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-33%25-blue)
+![C#](https://img.shields.io/badge/C%23-7%25-blue)
+![Shell](https://img.shields.io/badge/Shell-3%25-blue)
+![JupyterNotebook](https://img.shields.io/badge/JupyterNotebook-3%25-blue)
+![Makefile](https://img.shields.io/badge/Makefile-1%25-blue)
+![CSS](https://img.shields.io/badge/CSS-1%25-blue)
+
+![Python](https://img.shields.io/badge/Python-47%25-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-33%25-blue)
+![C#](https://img.shields.io/badge/C%23-7%25-blue)
+![Shell](https://img.shields.io/badge/Shell-3%25-blue)
+![JupyterNotebook](https://img.shields.io/badge/JupyterNotebook-3%25-blue)
+![Makefile](https://img.shields.io/badge/Makefile-1%25-blue)
+![CSS](https://img.shields.io/badge/CSS-1%25-blue)
+
+![Python](https://img.shields.io/badge/Python-47%25-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-33%25-blue)
+![C#](https://img.shields.io/badge/C%23-7%25-blue)
+![Shell](https://img.shields.io/badge/Shell-3%25-blue)
+![JupyterNotebook](https://img.shields.io/badge/JupyterNotebook-3%25-blue)
+![Makefile](https://img.shields.io/badge/Makefile-1%25-blue)
+![CSS](https://img.shields.io/badge/CSS-1%25-blue)
+
+![Python](https://img.shields.io/badge/Python-47%25-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-33%25-blue)
+![C#](https://img.shields.io/badge/C%23-7%25-blue)
+![Shell](https://img.shields.io/badge/Shell-3%25-blue)
+![JupyterNotebook](https://img.shields.io/badge/JupyterNotebook-3%25-blue)
+![Makefile](https://img.shields.io/badge/Makefile-1%25-blue)
+![CSS](https://img.shields.io/badge/CSS-1%25-blue)
+
+![Python](https://img.shields.io/badge/Python-47%25-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-33%25-blue)
+![C#](https://img.shields.io/badge/C%23-7%25-blue)
+![Shell](https://img.shields.io/badge/Shell-3%25-blue)
+![JupyterNotebook](https://img.shields.io/badge/JupyterNotebook-3%25-blue)
+![Makefile](https://img.shields.io/badge/Makefile-1%25-blue)
+![CSS](https://img.shields.io/badge/CSS-1%25-blue)
+
+![Python](https://img.shields.io/badge/Python-47%25-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-33%25-blue)
+![C#](https://img.shields.io/badge/C%23-7%25-blue)
+![Shell](https://img.shields.io/badge/Shell-3%25-blue)
+![JupyterNotebook](https://img.shields.io/badge/JupyterNotebook-3%25-blue)
+![Makefile](https://img.shields.io/badge/Makefile-1%25-blue)
+![CSS](https://img.shields.io/badge/CSS-1%25-blue)
+
+![Python](https://img.shields.io/badge/Python-47%25-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-33%25-blue)
+![C#](https://img.shields.io/badge/C%23-7%25-blue)
+![Shell](https://img.shields.io/badge/Shell-3%25-blue)
+![JupyterNotebook](https://img.shields.io/badge/JupyterNotebook-3%25-blue)
+![Makefile](https://img.shields.io/badge/Makefile-1%25-blue)
+![CSS](https://img.shields.io/badge/CSS-1%25-blue)
