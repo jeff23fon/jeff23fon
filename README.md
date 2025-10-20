@@ -2,11 +2,10 @@
 
 Data Science/AI Engineer loves creating AI applications to automate tasks. Good at FastAPI, Python, Data Science. Will delve into different tach stacks just for the fun of learning and fine-tuning applications.
 
-- 🔭 I’m currently working on AI Chatbot using FastAPI and React, and a Commercial Selling Platform
-- 🌱 I’m currently learning Typescript, MCP, DevOps
+- 🔭 I’m currently working on AI Chatbot and Commerce Platform
+- 🌱 I’m currently learning Typescript, MCP, DevOps, LLM Automation
 - 💬 Ask me about food!. I love food!
-- 📫 How to reach me: linkedin.com/in/jeff-a-90547120a/
-- ⚡ Fun fact: I can drive reach in a freezer (-22°) for 3 hours without coming out.
+- ⚡ Fun fact: I can drive reach in a freezer (-22°) for 3 hours.
 
 ## Tech Stacks
 <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center">
