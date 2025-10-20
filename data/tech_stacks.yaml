@@ -6,10 +6,22 @@
   src: assets/icons/python.svg
   alt: Python
   title: Python
+- href: https://pandas.pydata.org/
+  src: assets/icons/pandas.svg
+  alt: Pandas
+  title: Pandas
 - href: https://www.r-project.org/
   src: assets/icons/r.svg
   alt: R
   title: R
+- href: https://matplotlib.org/
+  src: assets/icons/matplotlib.svg
+  alt: Matplotlib
+  title: Matplotlib
+- href: https://keras.io/
+  src: assets/icons/keras.svg
+  alt: Keras
+  title: Keras
 - href: https://scikit-learn.org/
   src: assets/icons/scikitlearn.svg
   alt: scikit-learn
@@ -18,6 +30,10 @@
   src: assets/icons/selenium.svg
   alt: Selenium
   title: Selenium
+- href: https://playwright.dev/
+  src: assets/icons/playwright.svg
+  alt: Playwright
+  title: Playwright
 - href: https://www.postman.com/
   src: assets/icons/postman.svg
   alt: Postman
@@ -26,6 +42,10 @@
   src: assets/icons/fastapi.svg
   alt: FastAPI
   title: FastAPI
+- href: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+  src: assets/icons/batman.svg
+  alt: Dark Knight
+  title: Dark Knight
 - href: https://flask.palletsprojects.com/
   src: assets/icons/flask.svg
   alt: Flask
@@ -38,6 +58,10 @@
   src: assets/icons/azure.svg
   alt: Azure
   title: Azure
+- href: https://www.atlassian.com/software/jira
+  src: assets/icons/jira.svg
+  alt: Jira
+  title: Jira
 - href: https://www.docker.com/
   src: assets/icons/docker.svg
   alt: Docker
@@ -114,3 +138,7 @@
   src: assets/icons/postgreSQL.svg
   alt: PostgreSQL
   title: PostgreSQL
+- href: https://azure.microsoft.com/en-us/products/cosmos-db
+  src: assets/icons/cosmosdb.svg
+  alt: CosmosDB
+  title: CosmosDB

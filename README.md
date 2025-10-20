@@ -16,8 +16,17 @@ Data Science/AI Engineer loves creating AI applications to automate tasks. Good 
   <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer" title="Python">
     <img src="assets/icons/python.svg" alt="Python" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
   </a>
+  <a href="https://pandas.pydata.org/" target="_blank" rel="noopener noreferrer" title="Pandas">
+    <img src="assets/icons/pandas.svg" alt="Pandas" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
+  </a>
   <a href="https://www.r-project.org/" target="_blank" rel="noopener noreferrer" title="R">
     <img src="assets/icons/r.svg" alt="R" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
+  </a>
+  <a href="https://matplotlib.org/" target="_blank" rel="noopener noreferrer" title="Matplotlib">
+    <img src="assets/icons/matplotlib.svg" alt="Matplotlib" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
+  </a>
+  <a href="https://keras.io/" target="_blank" rel="noopener noreferrer" title="Keras">
+    <img src="assets/icons/keras.svg" alt="Keras" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
   </a>
   <a href="https://scikit-learn.org/" target="_blank" rel="noopener noreferrer" title="scikit-learn">
     <img src="assets/icons/scikitlearn.svg" alt="scikit-learn" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
@@ -25,11 +34,17 @@ Data Science/AI Engineer loves creating AI applications to automate tasks. Good 
   <a href="https://www.selenium.dev/" target="_blank" rel="noopener noreferrer" title="Selenium">
     <img src="assets/icons/selenium.svg" alt="Selenium" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
   </a>
+  <a href="https://playwright.dev/" target="_blank" rel="noopener noreferrer" title="Playwright">
+    <img src="assets/icons/playwright.svg" alt="Playwright" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
+  </a>
   <a href="https://www.postman.com/" target="_blank" rel="noopener noreferrer" title="Postman">
     <img src="assets/icons/postman.svg" alt="Postman" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
   </a>
   <a href="https://fastapi.tiangolo.com/" target="_blank" rel="noopener noreferrer" title="FastAPI">
     <img src="assets/icons/fastapi.svg" alt="FastAPI" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
+  </a>
+  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer" title="Dark Knight">
+    <img src="assets/icons/batman.svg" alt="Dark Knight" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
   </a>
   <a href="https://flask.palletsprojects.com/" target="_blank" rel="noopener noreferrer" title="Flask">
     <img src="assets/icons/flask.svg" alt="Flask" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
@@ -39,6 +54,9 @@ Data Science/AI Engineer loves creating AI applications to automate tasks. Good 
   </a>
   <a href="https://azure.microsoft.com/" target="_blank" rel="noopener noreferrer" title="Azure">
     <img src="assets/icons/azure.svg" alt="Azure" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
+  </a>
+  <a href="https://www.atlassian.com/software/jira" target="_blank" rel="noopener noreferrer" title="Jira">
+    <img src="assets/icons/jira.svg" alt="Jira" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
   </a>
   <a href="https://www.docker.com/" target="_blank" rel="noopener noreferrer" title="Docker">
     <img src="assets/icons/docker.svg" alt="Docker" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
@@ -96,6 +114,9 @@ Data Science/AI Engineer loves creating AI applications to automate tasks. Good 
   </a>
   <a href="https://www.postgresql.org/" target="_blank" rel="noopener noreferrer" title="PostgreSQL">
     <img src="assets/icons/postgreSQL.svg" alt="PostgreSQL" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
+  </a>
+  <a href="https://azure.microsoft.com/en-us/products/cosmos-db" target="_blank" rel="noopener noreferrer" title="CosmosDB">
+    <img src="assets/icons/cosmosdb.svg" alt="CosmosDB" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
   </a>
 </div>
 
