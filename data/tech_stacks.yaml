@@ -6,18 +6,22 @@
   src: assets/icons/python.svg
   alt: Python
   title: Python
-- href: https://pandas.pydata.org/
-  src: assets/icons/pandas.svg
-  alt: Pandas
-  title: Pandas
 - href: https://www.r-project.org/
   src: assets/icons/r.svg
   alt: R
   title: R
+- href: https://pandas.pydata.org/
+  src: assets/icons/pandas.svg
+  alt: Pandas
+  title: Pandas
 - href: https://matplotlib.org/
   src: assets/icons/matplotlib.svg
   alt: Matplotlib
   title: Matplotlib
+- href: https://seaborn.pydata.org/index.html
+  src: assets/icons/seaborn.svg
+  alt: Seaborn
+  title: Seaborn
 - href: https://keras.io/
   src: assets/icons/keras.svg
   alt: Keras
@@ -110,6 +114,18 @@
   src: assets/icons/redux.svg
   alt: Redux
   title: Redux
+- href: https://zustand.docs.pmnd.rs/getting-started/introduction
+  src: assets/icons/zustand.svg
+  alt: Zustand
+  title: Zustand
+- href: https://tanstack.com/
+  src: assets/icons/tanstack.svg
+  alt: TanStack
+  title: TanStack
+- href: https://reactrouter.com/home
+  src: assets/icons/reactrouter.svg
+  alt: React_Router
+  title: React_Router
 - href: https://vitejs.dev/
   src: assets/icons/vite.svg
   alt: Vite
@@ -142,3 +158,7 @@
   src: assets/icons/cosmosdb.svg
   alt: CosmosDB
   title: CosmosDB
+- href: https://www.databricks.com/
+  src: assets/icons/databricks.svg
+  alt: Databricks
+  title: Databricks

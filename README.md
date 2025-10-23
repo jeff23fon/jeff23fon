@@ -1,6 +1,6 @@
 ## Hi there 👋
 
-Data Science/AI Engineer loves creating AI applications to automate tasks. Good at FastAPI, Python, Data Science. Will delve into different tach stacks just for the fun of learning and fine-tuning applications.
+Data Science/AI Engineer loves creating AI applications to automate tasks. Good at FastAPI, Python, Data Science. Will delve into different tech stacks just for the fun of learning and fine-tuning applications.
 
 - 🔭 I’m currently working on AI Chatbot and Commerce Platform
 - 🌱 I’m currently learning Typescript, MCP, DevOps, LLM Automation
@@ -15,14 +15,17 @@ Data Science/AI Engineer loves creating AI applications to automate tasks. Good 
   <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer" title="Python">
     <img src="assets/icons/python.svg" alt="Python" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
   </a>
-  <a href="https://pandas.pydata.org/" target="_blank" rel="noopener noreferrer" title="Pandas">
-    <img src="assets/icons/pandas.svg" alt="Pandas" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
-  </a>
   <a href="https://www.r-project.org/" target="_blank" rel="noopener noreferrer" title="R">
     <img src="assets/icons/r.svg" alt="R" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
   </a>
+  <a href="https://pandas.pydata.org/" target="_blank" rel="noopener noreferrer" title="Pandas">
+    <img src="assets/icons/pandas.svg" alt="Pandas" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
+  </a>
   <a href="https://matplotlib.org/" target="_blank" rel="noopener noreferrer" title="Matplotlib">
     <img src="assets/icons/matplotlib.svg" alt="Matplotlib" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
+  </a>
+  <a href="https://seaborn.pydata.org/index.html" target="_blank" rel="noopener noreferrer" title="Seaborn">
+    <img src="assets/icons/seaborn.svg" alt="Seaborn" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
   </a>
   <a href="https://keras.io/" target="_blank" rel="noopener noreferrer" title="Keras">
     <img src="assets/icons/keras.svg" alt="Keras" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
@@ -93,6 +96,15 @@ Data Science/AI Engineer loves creating AI applications to automate tasks. Good 
   <a href="https://redux.js.org/" target="_blank" rel="noopener noreferrer" title="Redux">
     <img src="assets/icons/redux.svg" alt="Redux" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
   </a>
+  <a href="https://zustand.docs.pmnd.rs/getting-started/introduction" target="_blank" rel="noopener noreferrer" title="Zustand">
+    <img src="assets/icons/zustand.svg" alt="Zustand" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
+  </a>
+  <a href="https://tanstack.com/" target="_blank" rel="noopener noreferrer" title="TanStack">
+    <img src="assets/icons/tanstack.svg" alt="TanStack" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
+  </a>
+  <a href="https://reactrouter.com/home" target="_blank" rel="noopener noreferrer" title="React_Router">
+    <img src="assets/icons/reactrouter.svg" alt="React_Router" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
+  </a>
   <a href="https://vitejs.dev/" target="_blank" rel="noopener noreferrer" title="Vite">
     <img src="assets/icons/vite.svg" alt="Vite" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
   </a>
@@ -116,6 +128,9 @@ Data Science/AI Engineer loves creating AI applications to automate tasks. Good 
   </a>
   <a href="https://azure.microsoft.com/en-us/products/cosmos-db" target="_blank" rel="noopener noreferrer" title="CosmosDB">
     <img src="assets/icons/cosmosdb.svg" alt="CosmosDB" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
+  </a>
+  <a href="https://www.databricks.com/" target="_blank" rel="noopener noreferrer" title="Databricks">
+    <img src="assets/icons/databricks.svg" alt="Databricks" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
   </a>
 </div>
 
