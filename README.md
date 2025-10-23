@@ -123,6 +123,9 @@ Data Science/AI Engineer loves creating AI applications to automate tasks. Good 
   <a href="https://www.langchain.com/" target="_blank" rel="noopener noreferrer" title="LangChain">
     <img src="assets/icons/langchain.svg" alt="Langchain" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
   </a>
+  <a href="https://www.llamaindex.ai/" target="_blank" rel="noopener noreferrer" title="LlamaIndex">
+    <img src="assets/icons/llamaindex.svg" alt="LlamaIndex" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
+  </a>
   <a href="https://www.postgresql.org/" target="_blank" rel="noopener noreferrer" title="PostgreSQL">
     <img src="assets/icons/postgreSQL.svg" alt="PostgreSQL" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
   </a>

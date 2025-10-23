@@ -150,6 +150,10 @@
   src: assets/icons/langchain.svg
   alt: Langchain
   title: LangChain
+- href: https://www.llamaindex.ai/
+  src: assets/icons/llamaindex.svg
+  alt: LlamaIndex
+  title: LlamaIndex
 - href: https://www.postgresql.org/
   src: assets/icons/postgreSQL.svg
   alt: PostgreSQL
