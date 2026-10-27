@@ -2,9 +2,9 @@
 
 Data Science/AI Engineer loves creating AI applications to automate tasks. Good at FastAPI, Python, Data Science. Will delve into different tech stacks just for the fun of learning and fine-tuning applications.
 
-- 🔭 I’m currently working on AI Chatbot and Commerce Platform
-- 🌱 I’m currently learning Typescript, MCP, DevOps, LLM Automation
-- 💬 Ask me about food!. I love food!
+- 🔭 I’m currently working on AI orchestrator for personal agent..
+- 🌱 I’m currently learning to become a salesman.
+- 💬 Ask me about speaking Spanish! I don't!
 - ⚡ Fun fact: I can drive reach in a freezer (-22°) for 3 hours.
 
 ## Tech Stacks
@@ -74,6 +74,9 @@ Data Science/AI Engineer loves creating AI applications to automate tasks. Good 
   </a>
   <a href="https://ubuntu.com/" target="_blank" rel="noopener noreferrer" title="Ubuntu">
     <img src="assets/icons/ubuntu.svg" alt="Ubuntu" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
+  </a>
+  <a href="https://tenor.com/en-GB/view/minions-lol-happy-gif-11005303" target="_blank" rel="noopener noreferrer" title="?">
+    <img src="assets/icons/sharingan.svg" alt="Ubuntu" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
   </a>
   <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer" title="HTML5">
     <img src="assets/icons/html5.svg" alt="HTML5" width="38" height="38" style="max-width:100%;height:auto;display:block"/>
