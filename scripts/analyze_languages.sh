@@ -1,149 +1,120 @@
 #!/bin/bash
+#
+# Scan repos in ~/github/_lang_scan/ using tokei and update README.md
+# with language distribution badges.
+#
+set -euo pipefail
 
-# Parse --verbose option
-VERBOSE=0
-for arg in "$@"; do
-  if [ "$arg" = "--verbose" ]; then
-    VERBOSE=1
-  fi
-done
-if [ -f .env ]; then
-  source .env
+SCAN_DIR="${HOME}/github/_lang_scan"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
+STATS_MD="${PROJECT_DIR}/data/stats.md"
+BADGES_FILE="${PROJECT_DIR}/data/stats.badges"
+README="${PROJECT_DIR}/README.md"
+
+# Languages to exclude from stats (non-code / inflated)
+EXCLUDE_LANGS="JSON|Markdown|Plain Text|SVG|INI|Visual Studio Solution|MSBuild|TOML|YAML"
+
+# Check dependencies
+if ! command -v tokei &>/dev/null; then
+  echo "❌ tokei not found. Install: cargo install tokei"
+  exit 1
 fi
-USERNAME=${USERNAME:-"jeff23fon"}
-TOKEN=${TOKEN:-""}
-if [ -n "$IGNORED_REPOS" ]; then
-  IGNORED_REPOS=(${IGNORED_REPOS})
+
+if [ ! -d "$SCAN_DIR" ]; then
+  echo "❌ Scan directory not found: $SCAN_DIR"
+  echo "   Clone your repos there first."
+  exit 1
 fi
-declare -a IGNORED_REPOS
-TOTAL_BYTES=0
-declare -A LANG_BYTES
 
-# Fetch repos
-REPOS=$(curl -s -H "Authorization: token $TOKEN" "https://api.github.com/user/repos?type=all&per_page=100" | jq -r '.[].full_name')
+REPO_COUNT=$(find "$SCAN_DIR" -mindepth 1 -maxdepth 1 -type d | wc -l)
+if [ "$REPO_COUNT" -eq 0 ]; then
+  echo "❌ No repos found in $SCAN_DIR"
+  exit 1
+fi
 
-# Filter out ignored repos
-FILTERED_REPOS=""
-for REPO in $REPOS; do
-  SKIP=false
-  for IGNORED in "${IGNORED_REPOS[@]}"; do
-    if [ "$REPO" = "$IGNORED" ]; then
-      SKIP=true
-      break
-    fi
-  done
-  if [ "$SKIP" = false ]; then
-    FILTERED_REPOS="$FILTERED_REPOS $REPO"
-  fi
-done
-REPOS=$FILTERED_REPOS
+echo "📊 Scanning $REPO_COUNT repos in $SCAN_DIR..."
 
+# Run tokei and process with python for accurate rounding
+tokei --output json "$SCAN_DIR" | python3 -c "
+import json, sys, urllib.parse
 
+EXCLUDE = set('${EXCLUDE_LANGS}'.split('|'))
 
-if [ "$VERBOSE" -eq 1 ]; then
-  echo "Total repos fetched: $(echo "$REPOS" | wc -w)"
-  echo "Repos:"
-  for REPO in $REPOS; do
-    echo "$REPO"
-  done
+data = json.load(sys.stdin)
+langs = {}
+for lang, info in data.items():
+    if lang == 'Total' or lang in EXCLUDE:
+        continue
+    if isinstance(info, dict) and 'code' in info and info['code'] > 0:
+        langs[lang] = info['code']
+
+total = sum(langs.values())
+if total == 0:
+    print('No code found.', file=sys.stderr)
+    sys.exit(1)
+
+# Calculate raw percentages and round
+raw = {lang: code * 100.0 / total for lang, code in langs.items()}
+rounded = {lang: round(pct) for lang, pct in raw.items()}
+
+# Adjust rounding so they sum to 100
+diff = 100 - sum(rounded.values())
+if diff != 0:
+    # Sort by fractional remainder (descending) to decide who gets +1 or -1
+    remainders = sorted(raw.items(), key=lambda x: x[1] - round(x[1]), reverse=(diff > 0))
+    for i in range(abs(diff)):
+        lang = remainders[i][0]
+        rounded[lang] += 1 if diff > 0 else -1
+
+# Sort by percentage descending
+sorted_langs = sorted(rounded.items(), key=lambda x: -x[1])
+
+# Write stats.md
+with open('${STATS_MD}', 'w') as f:
+    f.write('# Language Statistics\n\n')
+    f.write('| Language | Percentage |\n')
+    f.write('|----------|------------|\n')
+    for lang, pct in sorted_langs:
+        f.write(f'| {lang} | {pct}% |\n')
+
+# Write badges file (only >0%)
+with open('${BADGES_FILE}', 'w') as f:
+    for lang, pct in sorted_langs:
+        if pct > 0:
+            lang_esc = urllib.parse.quote(lang, safe='')
+            f.write(f'![{lang}](https://img.shields.io/badge/{lang_esc}-{pct}%25-blue)\n')
+
+# Print summary
+for lang, pct in sorted_langs:
+    print(f'  {lang}: {pct}%')
+print(f'  ---')
+print(f'  Total lines of code: {total:,}')
+"
+
+# Update README.md: replace content under '## Language Distribution'
+if grep -q '^## Language Distribution' "$README"; then
+  python3 -c "
+import re
+
+with open('${BADGES_FILE}') as f:
+    badges = f.read().strip()
+
+with open('${README}') as f:
+    content = f.read()
+
+# Replace everything between '## Language Distribution' and the next '##' or EOF
+pattern = r'(## Language Distribution\n).*?(?=\n## |\Z)'
+replacement = r'\1\n' + badges + '\n'
+new_content = re.sub(pattern, replacement, content, flags=re.DOTALL)
+
+with open('${README}', 'w') as f:
+    f.write(new_content)
+"
   echo ""
-fi
-
-for REPO in $REPOS; do
-  LANGUAGES=$(curl -s -H "Authorization: token $TOKEN" "https://api.github.com/repos/$REPO/languages")
-  while IFS=':' read -r LANG BYTES; do
-    LANG=$(echo $LANG | tr -d '" ')
-    BYTES=$(echo $BYTES | tr -d ', ')
-    if [[ $BYTES =~ ^[0-9]+$ ]]; then
-      LANG_BYTES[$LANG]=$((LANG_BYTES[$LANG] + BYTES))
-      TOTAL_BYTES=$((TOTAL_BYTES + BYTES))
-    fi
-  done <<< "$(printf '%s' "$LANGUAGES" | jq -r 'to_entries[] | "\(.key):\(.value)"')"
-done
-
-# Calculate percentages
-SORTED=$(for LANG in "${!LANG_BYTES[@]}"; do
-  PERCENT=$((LANG_BYTES[$LANG] * 100 / TOTAL_BYTES))
-  echo "$LANG:$PERCENT"
-done | sort -t: -k2 -nr)
-
-
-# Output files in data/
-mkdir -p data
-STATS_MD="data/stats.md"
-BADGES_FILE="data/stats.badges"
-: > "$STATS_MD"
-: > "$BADGES_FILE"
-
-echo "# Language Statistics" > "$STATS_MD"
-echo "" >> "$STATS_MD"
-echo "| Language | Percentage |" >> "$STATS_MD"
-echo "|----------|------------|" >> "$STATS_MD"
-
-# Prepare badges file (only >0%)
-echo "$SORTED" | while IFS=: read -r LANG PERCENT; do
-  if [ "$VERBOSE" -eq 1 ]; then
-    echo "$LANG: $PERCENT%"
-  fi
-  echo "| $LANG | $PERCENT% |" >> "$STATS_MD"
-  if [ "$PERCENT" -gt 0 ]; then
-    # URL-encode the language label so characters like '#' don't break the badge URL
-    if command -v python3 >/dev/null 2>&1; then
-      LANG_ESC=$(python3 -c "import urllib.parse,sys; print(urllib.parse.quote(sys.argv[1], safe=''))" "$LANG")
-    else
-      LANG_ESC=$(echo "$LANG" | sed -e 's/#/%23/g' -e 's/ /%20/g' -e 's/\//%2F/g')
-    fi
-    printf '![%s](https://img.shields.io/badge/%s-%s%%25-blue)\n' "$LANG" "$LANG_ESC" "$PERCENT" >> "$BADGES_FILE"
-  fi
-done
-
-
-
-# Auto-update README.md: remove all old badge blocks and insert only one new block under '## Language Distribution'
-if grep -q '^## Language Distribution' README.md; then
-  awk -v file="$BADGES_FILE" '
-    BEGIN {infile=file; insection=0}
-    /^## Language Distribution/ {
-      print; print ""; # print header and blank line
-      while ((getline line < infile) > 0) print line;
-      insection=1; next
-    }
-    insection && (/^!/ || /^$/) { next }
-    insection && !/^!/ { next }
-    insection=0
-    { print }
-  ' README.md > README.md.tmp && mv README.md.tmp README.md
+  echo "✅ README.md updated with language badges."
 else
-  echo "Section '## Language Distribution' not found in README.md."
+  echo "⚠️  Section '## Language Distribution' not found in README.md."
 fi
 
-if [ "$VERBOSE" -eq 1 ]; then
-  echo ""
-  echo "Per repo breakdown (% per repo):"
-  for REPO in $REPOS; do
-    echo "$REPO:"
-    LANGUAGES=$(curl -s -H "Authorization: token $TOKEN" "https://api.github.com/repos/$REPO/languages")
-    TOTAL=0
-    declare -A REPO_LANG_BYTES
-    for ENTRY in $(echo "$LANGUAGES" | jq -r 'to_entries[] | "\(.key):\(.value)"'); do
-      LANG=${ENTRY%%:*}
-      BYTES=${ENTRY##*:}
-      REPO_LANG_BYTES[$LANG]=$BYTES
-      TOTAL=$((TOTAL + BYTES))
-    done
-    if [ "$TOTAL" -gt 0 ]; then
-      for LANG in "${!REPO_LANG_BYTES[@]}"; do
-        PERCENT=$((REPO_LANG_BYTES[$LANG] * 100 / TOTAL))
-        echo "  $LANG: $PERCENT%"
-      done
-    else
-      echo "  No languages or empty repo"
-    fi
-    echo ""
-    unset REPO_LANG_BYTES
-  done
-  echo ""
-fi
-echo "✅  README.md updated with new badges under '## Language Distribution'."
-REPO_COUNT=$(echo "$REPOS" | wc -w)
-echo "✅  README.md updated with $REPO_COUNT repos!"
+echo "✅ Scanned $REPO_COUNT repos."

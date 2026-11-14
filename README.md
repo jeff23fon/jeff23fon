@@ -142,10 +142,13 @@ Data Science/AI Engineer loves creating AI applications to automate tasks. Good 
 
 ## Language Distribution
 
-![Python](https://img.shields.io/badge/Python-47%25-blue)
-![TypeScript](https://img.shields.io/badge/TypeScript-33%25-blue)
-![C#](https://img.shields.io/badge/C%23-7%25-blue)
-![Shell](https://img.shields.io/badge/Shell-3%25-blue)
-![JupyterNotebook](https://img.shields.io/badge/JupyterNotebook-3%25-blue)
-![Makefile](https://img.shields.io/badge/Makefile-1%25-blue)
-![CSS](https://img.shields.io/badge/CSS-1%25-blue)
+![Python](https://img.shields.io/badge/Python-55%25-blue)
+![TSX](https://img.shields.io/badge/TSX-16%25-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-12%25-blue)
+![CSS](https://img.shields.io/badge/CSS-4%25-blue)
+![HTML](https://img.shields.io/badge/HTML-3%25-blue)
+![Jupyter Notebooks](https://img.shields.io/badge/Jupyter%20Notebooks-3%25-blue)
+![Rust](https://img.shields.io/badge/Rust-3%25-blue)
+![SQL](https://img.shields.io/badge/SQL-2%25-blue)
+![C#](https://img.shields.io/badge/C%23-1%25-blue)
+![Shell](https://img.shields.io/badge/Shell-1%25-blue)
