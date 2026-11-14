@@ -5,6 +5,12 @@
 scan:
     bash ./scripts/analyze_languages.sh
 
+# Scan + commit + push in one go
+scan-push: scan
+    git add -A
+    git commit -m "update language stats"
+    git push origin main
+
 # Update tech stacks in README.md
 techstacks:
     python3 ./scripts/update_readme.py
