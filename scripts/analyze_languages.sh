@@ -54,21 +54,27 @@ if total == 0:
     print('No code found.', file=sys.stderr)
     sys.exit(1)
 
-# Calculate raw percentages and round
+# Calculate percentages to 1 decimal place
 raw = {lang: code * 100.0 / total for lang, code in langs.items()}
-rounded = {lang: round(pct) for lang, pct in raw.items()}
+rounded = {lang: round(pct, 1) for lang, pct in raw.items()}
 
-# Adjust rounding so they sum to 100
-diff = 100 - sum(rounded.values())
+# Adjust rounding so they sum to 100.0
+diff = round(100.0 - sum(rounded.values()), 1)
 if diff != 0:
-    # Sort by fractional remainder (descending) to decide who gets +1 or -1
-    remainders = sorted(raw.items(), key=lambda x: x[1] - round(x[1]), reverse=(diff > 0))
-    for i in range(abs(diff)):
-        lang = remainders[i][0]
-        rounded[lang] += 1 if diff > 0 else -1
+    remainders = sorted(raw.items(), key=lambda x: x[1] - round(x[1], 1), reverse=(diff > 0))
+    step = 0.1 if diff > 0 else -0.1
+    steps = int(round(abs(diff) * 10))
+    for i in range(steps):
+        lang = remainders[i % len(remainders)][0]
+        rounded[lang] = round(rounded[lang] + step, 1)
 
 # Sort by percentage descending
 sorted_langs = sorted(rounded.items(), key=lambda x: -x[1])
+
+# Format percentage: show 1 decimal, but use '0.0' not '-0.0'
+def fmt(pct):
+    s = f'{pct:.1f}'
+    return '0.0' if s == '-0.0' else s
 
 # Write stats.md
 with open('${STATS_MD}', 'w') as f:
@@ -76,18 +82,18 @@ with open('${STATS_MD}', 'w') as f:
     f.write('| Language | Percentage |\n')
     f.write('|----------|------------|\n')
     for lang, pct in sorted_langs:
-        f.write(f'| {lang} | {pct}% |\n')
+        f.write(f'| {lang} | {fmt(pct)}% |\n')
 
 # Write badges file (only >0%)
 with open('${BADGES_FILE}', 'w') as f:
     for lang, pct in sorted_langs:
         if pct > 0:
             lang_esc = urllib.parse.quote(lang, safe='')
-            f.write(f'![{lang}](https://img.shields.io/badge/{lang_esc}-{pct}%25-blue)\n')
+            f.write(f'![{lang}](https://img.shields.io/badge/{lang_esc}-{fmt(pct)}%25-blue)\n')
 
 # Print summary
 for lang, pct in sorted_langs:
-    print(f'  {lang}: {pct}%')
+    print(f'  {lang}: {fmt(pct)}%')
 print(f'  ---')
 print(f'  Total lines of code: {total:,}')
 "
